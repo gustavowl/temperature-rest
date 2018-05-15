@@ -16,11 +16,11 @@ import org.json.simple.JSONArray;
 public class App {
     private static final String KEY = "1e88145a18b241f68b7150325182603";
     private static Repository r = new Repository();
-			
+
     /**
-    * Operação de Web service
-    * @param cidade a ser consultada
-    * @return 
+    @param cidade a ser consultada
+    * @return o valor da temperatura em celcius
+    * @throws java.lang.Exception exception da API
     */
 
     public static String getTemperaturaCelsius(String cidade) throws Exception {
@@ -29,10 +29,23 @@ public class App {
        return ("A temperatura em " + cidade + " eh: " + String.valueOf(t) + " graus Celcius");
     }
 
+    /**
+     * @param cidade
+     * @return o valor da temperatura em farenheitt
+     * @throws java.lang.Exception exception da API
+     */
+    */
+
      public static String getTemperaturaFarenheitt(String cidade) throws Exception {
         double t = r.GetWeatherData(KEY, RequestBlocks.GetBy.Metar.CityName, cidade.trim().toLowerCase().replace(' ', '_')).getCurrent().getTempF();
         return ("A temperatura em " + cidade + " eh: " + String.valueOf(t) + " graus Farenheitt");
     }
+     
+     /**
+      * @param cidade
+      * @return arraylist de Strings com todas as informações sobre determinada cidade
+      * @throws Exception exception da API
+      */
      
      public static ArrayList<String> getInformation(String cidade) throws Exception{
          ArrayList<String> current = new ArrayList<String>();

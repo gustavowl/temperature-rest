@@ -17,6 +17,13 @@ import javax.ws.rs.core.MediaType;
  */
 @Path("/farenheitt")
 public class TemperaturaFarenheitt {
+
+	/**
+     * consultar temperatura em F
+     * @param param1 cidade
+     * @return temperatura em F
+     * @throws Exception exception da api
+     */
     
     @GET
     @Path("{param1}")

@@ -18,6 +18,13 @@ import javax.ws.rs.core.MediaType;
 @Path("/celcius")
 public class TemperaturaCelcius {
     
+	/**
+     * consultar temperatura em C
+     * @param param1 cidade
+     * @return temperatura em C
+     * @throws Exception exception da api
+     */
+
     @GET
     @Path("{param1}")
     @Produces(MediaType.TEXT_PLAIN)

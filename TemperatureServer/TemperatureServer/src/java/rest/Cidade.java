@@ -21,8 +21,8 @@ import javax.ws.rs.core.MediaType;
 public class Cidade {
    
     /**
-     *
-     * @param param1
+     * chamada html para requisição de informações da cidade
+     * @param param1 cidade
      * @throws java.lang.Exception
      */
     @GET
